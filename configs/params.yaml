@@ -1,0 +1,89 @@
+general:
+  seed: 42
+  project_name: supermarket_sales_analysis
+
+data:
+  raw_path: data/raw/train.csv
+  processed_path: data/processed/train_cleaned.csv
+  date_column: Order Date
+  date_format: "%d/%m/%Y"
+
+preprocessing:
+  drop_columns:
+    - Row ID
+    - Postal Code
+    - Country
+  categorical_columns:
+    - Ship Mode
+    - Segment
+    - Region
+    - Category
+    - Sub-Category
+  target_column: Segment
+  test_size: 0.2
+
+features:
+  rfm:
+    snapshot_date: "2019-01-01"   # 1 ngày sau ngày cuối dataset
+    recency_unit: days
+  time_series:
+    resample_freq: M              # Monthly aggregation
+    target: Sales
+
+mining:
+  association:
+    basket_by: Order ID
+    item_column: Sub-Category
+    min_support: 0.02
+    min_confidence: 0.3
+    min_lift: 1.0
+    metric: lift
+  clustering:
+    algorithm: kmeans
+    n_clusters: 4
+    random_state: 42
+    n_init: 10
+  anomaly:
+    contamination: 0.05
+
+models:
+  supervised:
+    models_to_train:
+      - logistic_regression
+      - decision_tree
+      - random_forest
+    random_forest:
+      n_estimators: 100
+      max_depth: 10
+      random_state: 42
+    decision_tree:
+      max_depth: 6
+      random_state: 42
+    logistic_regression:
+      max_iter: 1000
+      random_state: 42
+    cv_folds: 5
+  forecasting:
+    model: prophet                # prophet / arima / holt_winters
+    forecast_periods: 6
+    arima:
+      order: [1, 1, 1]
+    holt_winters:
+      trend: add
+      seasonal: add
+      seasonal_periods: 12
+
+evaluation:
+  classification_metrics:
+    - accuracy
+    - f1_macro
+    - roc_auc_ovr
+  regression_metrics:
+    - mae
+    - rmse
+    - smape
+
+outputs:
+  figures_dir: outputs/figures
+  tables_dir: outputs/tables
+  models_dir: outputs/models

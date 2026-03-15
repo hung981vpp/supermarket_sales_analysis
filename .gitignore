@@ -1,0 +1,49 @@
+# ── Python ───────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# ── Môi trường ───────────────────────────────────────────────────
+.env
+.venv
+venv/
+env/
+ENV/
+.python-version
+
+# ── Jupyter Notebook ─────────────────────────────────────────────
+.ipynb_checkpoints/
+notebooks/runs/
+
+# ── Data ─────────────────────────────────────────────────────────
+# data/raw/       ← bỏ comment nếu không muốn commit data
+# data/processed/
+
+# ── Model artifacts ───────────────────────────────────────────────
+outputs/models/*.pkl
+outputs/models/*.joblib
+
+# ── Test / Coverage ───────────────────────────────────────────────
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# ── IDE ───────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.sublime-workspace
+
+# ── OS ────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ── Logs ─────────────────────────────────────────────────────────
+*.log
+pip-log.txt
