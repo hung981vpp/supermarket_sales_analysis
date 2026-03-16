@@ -18,7 +18,7 @@ def handle_missing(df: pd.DataFrame) -> pd.DataFrame:
     for col in df.select_dtypes(include=[np.number]).columns:
         if df[col].isnull().any():
             df[col] = df[col].fillna(df[col].median())
-    for col in df.select_dtypes(include=["str", "object"]).columns:
+    for col in df.select_dtypes(include=["object"]).columns:
         if df[col].isnull().any():
             df[col] = df[col].fillna("Unknown")
     return df
