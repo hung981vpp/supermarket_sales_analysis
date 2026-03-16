@@ -1,5 +1,7 @@
 import sys
 from pathlib import Path
+import os
+os.environ["OMP_NUM_THREADS"] = "4"
 
 # Thêm root project vào sys.path để import src.
 sys.path.append(str(Path(__file__).resolve().parents[1]))

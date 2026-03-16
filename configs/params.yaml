@@ -34,8 +34,8 @@ mining:
   association:
     basket_by: Order ID
     item_column: Sub-Category
-    min_support: 0.02
-    min_confidence: 0.3
+    min_support: 0.01
+    min_confidence: 0.2
     min_lift: 1.0
     metric: lift
   clustering:
@@ -60,7 +60,7 @@ models:
       max_depth: 6
       random_state: 42
     logistic_regression:
-      max_iter: 1000
+      max_iter: 5000
       random_state: 42
     cv_folds: 5
   forecasting:

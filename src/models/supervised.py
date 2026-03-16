@@ -4,6 +4,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split, cross_val_score, StratifiedKFold
+from sklearn.preprocessing import LabelEncoder, StandardScaler
 from sklearn.metrics import (
     classification_report, confusion_matrix,
     f1_score, roc_auc_score, accuracy_score,
@@ -19,9 +20,13 @@ def prepare_xy(df: pd.DataFrame, params: dict) -> tuple:
               "Product Name", "Order Date", "Ship Date", target]
     feature_cols = [c for c in df.columns if c not in drop]
 
-    le = LabelEncoder()
     X  = df[feature_cols].select_dtypes(include=[np.number])
+    le = LabelEncoder()
     y  = le.fit_transform(df[target])
+
+    # Scale features
+    scaler = StandardScaler()
+    X = pd.DataFrame(scaler.fit_transform(X), columns=X.columns)
     return X, y, le
 
 # Chia train/test theo tỉ lệ trong params, giữ nguyên tỉ lệ lớp (stratify).

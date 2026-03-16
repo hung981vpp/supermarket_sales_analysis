@@ -1,0 +1,51 @@
+support,itemsets,length
+0.2607186606778277,frozenset({'Binders'}),1
+0.2374438546345447,frozenset({'Paper'}),1
+0.1745610453246223,frozenset({'Furnishings'}),1
+0.16210698244181299,frozenset({'Phones'}),1
+0.15557370355247038,frozenset({'Storage'}),1
+0.14699877501020825,frozenset({'Art'}),1
+0.14250714577378523,frozenset({'Accessories'}),1
+0.11290322580645161,frozenset({'Chairs'}),1
+0.09003674969375255,frozenset({'Appliances'}),1
+0.06941608819926501,frozenset({'Labels'}),1
+0.06002449979583503,frozenset({'Tables'}),1
+0.054103715802368314,"frozenset({'Paper', 'Binders'})",2
+0.04961208656594528,frozenset({'Envelopes'}),1
+0.04409963250306247,frozenset({'Bookcases'}),1
+0.04328297264189465,frozenset({'Fasteners'}),1
+0.03940383830134749,"frozenset({'Storage', 'Binders'})",2
+0.03879134340547162,"frozenset({'Phones', 'Binders'})",2
+0.038178848509595756,"frozenset({'Binders', 'Furnishings'})",2
+0.03572886892609228,frozenset({'Supplies'}),1
+0.035524703960800326,"frozenset({'Storage', 'Paper'})",2
+0.03409554920375663,"frozenset({'Paper', 'Furnishings'})",2
+0.033687219273172725,"frozenset({'Phones', 'Paper'})",2
+0.03225806451612903,"frozenset({'Accessories', 'Binders'})",2
+0.030012249897917516,"frozenset({'Accessories', 'Paper'})",2
+0.029603919967333605,"frozenset({'Art', 'Paper'})",2
+0.02939975500204165,"frozenset({'Art', 'Binders'})",2
+0.028991425071457737,"frozenset({'Phones', 'Furnishings'})",2
+0.02694977541853818,"frozenset({'Storage', 'Furnishings'})",2
+0.0259289505920784,"frozenset({'Paper', 'Chairs'})",2
+0.02531645569620253,"frozenset({'Appliances', 'Binders'})",2
+0.024703960800326663,"frozenset({'Phones', 'Art'})",2
+0.023274806043282973,"frozenset({'Phones', 'Storage'})",2
+0.022866476112699062,"frozenset({'Phones', 'Accessories'})",2
+0.022662311147407105,"frozenset({'Accessories', 'Furnishings'})",2
+0.022662311147407105,"frozenset({'Chairs', 'Binders'})",2
+0.021845651286239283,"frozenset({'Appliances', 'Paper'})",2
+0.020620661494487547,"frozenset({'Accessories', 'Storage'})",2
+0.02000816659861168,"frozenset({'Art', 'Furnishings'})",2
+0.01980400163331972,"frozenset({'Storage', 'Art'})",2
+0.01980400163331972,"frozenset({'Chairs', 'Furnishings'})",2
+0.018170681910984074,"frozenset({'Accessories', 'Art'})",2
+0.017558187015108206,"frozenset({'Phones', 'Chairs'})",2
+0.017354022049816252,frozenset({'Machines'}),1
+0.016741527153940384,"frozenset({'Storage', 'Chairs'})",2
+0.016537362188648427,"frozenset({'Labels', 'Binders'})",2
+0.016129032258064516,"frozenset({'Art', 'Chairs'})",2
+0.016129032258064516,"frozenset({'Appliances', 'Furnishings'})",2
+0.015924867292772562,"frozenset({'Labels', 'Paper'})",2
+0.015108207431604737,"frozenset({'Appliances', 'Phones'})",2
+0.013679052674561045,"frozenset({'Binders', 'Tables'})",2
