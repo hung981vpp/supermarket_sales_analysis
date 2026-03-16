@@ -144,16 +144,39 @@ Toàn bộ tham số pipeline được khai báo trong `configs/params.yaml`:
 ```yaml
 general:
   seed: 42
+
+preprocessing:
+  test_size: 0.2
+  target_column: Segment
+  outlier_zscore_threshold: 3.0
+
 mining:
   association:
-    min_support: 0.02
-    min_confidence: 0.3
+    min_support: 0.01
+    min_confidence: 0.2
+    min_lift: 1.0
   clustering:
     n_clusters: 4
+
 models:
+  supervised:
+    models_to_train: [logistic_regression, decision_tree, random_forest]
+    cv_folds: 5
+    logistic_regression:
+      max_iter: 5000
+    decision_tree:
+      max_depth: 10
+    random_forest:
+      n_estimators: 200
+      max_depth: 10
   forecasting:
-    model: prophet
     forecast_periods: 6
+    arima:
+      order:[1]
+    holt_winters:
+      trend: add
+      seasonal: add
+      seasonal_periods: 12
 ```
 
 ---
