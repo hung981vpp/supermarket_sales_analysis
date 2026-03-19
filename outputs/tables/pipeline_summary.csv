@@ -1,0 +1,5 @@
+Task,Phương pháp,Metric chính,Insight chính
+Luật kết hợp,Apriori (min_support=0.02),Lift max = 1.21,Chairs → Tables là combo mạnh nhất
+Phân cụm,KMeans (k=4),Silhouette (xem notebook 03),4 phân khúc: VIP / Mới / Trung thành / Không hoạt động
+Phân lớp,Random Forest,F1-macro = 0.3300,"Consumer dễ phân lớp, Home Office khó nhất"
+Dự báo,Prophet,RMSE = 11082.71,"Doanh số tăng Q4, Prophet capture tốt seasonality"
